@@ -5,3 +5,13 @@
 
 
 /*Drawing app*/
+
+
+/*Canvas*/
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    border: 2px black solid;
+    background-color: hsla(0, 0%, 97%, 0.986)
+}
