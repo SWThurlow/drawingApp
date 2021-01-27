@@ -13,6 +13,10 @@ canvas.addEventListener('mousemove', draw);
 /*Drawing functions*/
 
 let painting = false;
+let canStyle = getComputedStyle(canvas);
+let canMargX = canStyle.getPropertyValue('margin-left').split('px');
+let h1Style = getComputedStyle(document.querySelector('h1'));
+let canMargY = h1Style.getPropertyValue('height').split('px');
 
 /*Start and end positions*/
 
@@ -28,10 +32,13 @@ function finishPosition(e) {
 
 function draw(e) {
     if (!painting) return;
+
+    let x = e.clientX - parseFloat(canMargX[0]);
+    let y = e.clientY - parseFloat(canMargY[0]);
     ctx.lineWidth = 10;
-    ctx.lineTo(e.clientX, e.clientY);
+    ctx.lineTo(x, y);
     ctx.strokeStyle = '#000'
     ctx.stroke();
     ctx.beginPath();
-    ctx.moveTo(e.clientX, e.clientY);
+    ctx.moveTo(x, y);
 }
