@@ -12,19 +12,31 @@
     <canvas></canvas>
     <div class="brushShapes">
         <h2>Brush Shape</h2>
-        <button></button>
-        <button></button>
+        <button id="round">Round</button>
+        <button id="square">Square</button>
+        <button id="eraser">Eraser</button>
     </div>
-    <div class="brushSizes">
+    <div class="brushSize">
         <h2>Brush Size</h2>
-        <button></button>
-        <button></button>
-        <button></button>
+        <input type="range" min="1" max="50" step="1" value="15" id="brushSize">
+        <output for="brushSize" id="sizeOutput">15</output>
     </div>
     <div class="brushColours">
-        <h2>Colours</h2>
-        <button></button>
-        <button></button>
+        <h2>Colour</h2>
+        <label for="red">Red</label>
+        <input type="range" min="0" max="255" step="1" value="0" id="red">
+        <output for="red" id="redOutput">0</output>
+        <br>
+        <label for="green">Green</label>
+        <input type="range" min="0" max="255" step="1" value="0" id="green">
+        <output for="green" id="greenOutput">0</output>
+        <br>
+        <label for="blue">Blue</label>
+        <input type="range" min="0" max="255" step="1" value="0" id="blue">
+        <output for="blue" id="blueOutput">0</output>
+        <br>
+        <p>Current Colour:</p>
+        <div id="currentColour"> </div>
     </div>
 
 </body>

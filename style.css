@@ -13,5 +13,39 @@ canvas {
     display: block;
     margin: 0 auto;
     border: 2px black solid;
-    background-color: hsla(0, 0%, 97%, 0.986)
+    background-color: rgba(247, 247, 247, 0.986);
+}
+
+
+/*Brush shape settings*/
+
+
+/*Brush size settings*/
+
+#brushSize {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    height: 25px;
+    outline: none;
+    opacity: 0.7;
+}
+
+#brushSize:hover {
+    opacity: 1;
+}
+
+
+/*Brush colour settings*/
+
+p {
+    display: inline-block;
+}
+
+#currentColour {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border: black 2px solid;
+    background: rgb(0, 0, 0);
 }
